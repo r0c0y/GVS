@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Scene3D } from "@/components/scene-3d";
 
 export function Hero() {
     return (
         <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-4">
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-background to-background opacity-50" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/20 rounded-full blur-[120px] opacity-20 animate-pulse" />
+                <Scene3D />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
             </div>
 
             <div className="relative z-10 text-center max-w-5xl mx-auto">

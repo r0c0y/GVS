@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Scene3D } from "@/components/scene-3d";
 
 const team = [
     {
@@ -32,8 +33,9 @@ const team = [
 
 export function TeamSection() {
     return (
-        <section id="team" className="py-24 px-4 bg-background border-t border-white/5">
-            <div className="max-w-7xl mx-auto">
+        <section id="team" className="py-24 px-4 relative overflow-hidden border-t border-white/5">
+            <Scene3D />
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="mb-16">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">The Minds Behind Glip6</h2>
                     <p className="text-muted text-lg max-w-2xl">

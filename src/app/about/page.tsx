@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CoreValuesCircle } from "@/components/core-values-circle";
+import { Scene3D } from "@/components/scene-3d";
 
 export default function AboutPage() {
 
@@ -9,7 +10,8 @@ export default function AboutPage() {
         <div className="min-h-screen bg-black text-white overflow-hidden">
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-4">
-                <div className="max-w-5xl mx-auto text-center">
+                <Scene3D />
+                <div className="max-w-5xl mx-auto text-center relative z-10">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

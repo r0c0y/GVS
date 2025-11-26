@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Loader2, CheckCircle } from "lucide-react";
+import { Scene3D } from "@/components/scene-3d";
 
 export function EarlyAccessForm() {
     const [email, setEmail] = useState("");
@@ -34,6 +35,7 @@ export function EarlyAccessForm() {
 
     return (
         <section id="contact" className="py-24 px-4 relative overflow-hidden">
+            <Scene3D />
             <div className="absolute inset-0 bg-accent/5" />
             <div className="max-w-4xl mx-auto relative z-10 text-center">
                 <motion.div
@@ -65,7 +67,7 @@ export function EarlyAccessForm() {
                                 placeholder="Enter your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="flex-1 px-6 py-4 bg-white/5 border border-white/10 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+                                className="flex-1 px-6 py-4 bg-white/5 border border-white/10 rounded-full text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all shadow-[0_0_15px_rgba(83,91,242,0.1)] focus:shadow-[0_0_25px_rgba(83,91,242,0.3)]"
                                 required
                             />
                             <button
